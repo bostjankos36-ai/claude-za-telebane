@@ -5,8 +5,6 @@ Preprost vodnik v slovenščini za delo s Claude Code — za začetnike brez
 programerskega znanja. Vsebuje primere datotek (CLAUDE.md, ukazi, podagent,
 veščina), ki jih lahko kdorkoli kopira v svoj projekt.
 
-Lastnica: Nuša. Dela samo s telefona (Android), brez računalnika.
-
 ## Pomembne datoteke
 - `README.md` — glavni vodnik, prva stran na GitHubu
 - `.claude/commands/` — ukaza `/razlozi` in `/shrani`
