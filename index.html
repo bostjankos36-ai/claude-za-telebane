@@ -6,76 +6,10 @@
 <title>Claude Code za telebane</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;600;800&display=swap" rel="stylesheet">
-<style>
-/* VOICE: prijazno, jasno, s kančkom humorja – kot navodilo v škatlici zdravila
-   IDEA: navodilo za uporabo (zloženka iz lekarne)
-   PICTURE: škatlica "Claude Code za telebane" s pilulami-nasveti
-   COLOUR and TYPE: bela, smaragdna, bledo roza, črna; Schibsted Grotesk
-   LAYOUT: stran razdeljena na pravokotnike kot škatlica zdravila */
-:root{color-scheme:light dark;
---bg:light-dark(#fff,#04140d);--ink:light-dark(#0b0b0b,#eaf7f0);
---em:#00a86b;--pk:light-dark(#ffd6e0,#4a2430);--pkink:light-dark(#0b0b0b,#ffe6ec);
---line:light-dark(#0b0b0b,#9fd9bf);--soft:light-dark(#f3f3f3,#0b2219)}
-:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
-*{box-sizing:border-box;min-width:0}
-body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 "Schibsted Grotesk",system-ui,sans-serif;overflow-x:clip}
-.band{padding:clamp(28px,4vw,64px) max(5vw,16px)}
-.wrap{max-width:1240px;margin:0 auto}
-h1,h2,h3{font-weight:800;line-height:1.05;text-wrap:balance;margin:0}
-h1{font-size:clamp(36px,6vw,52px)}
-h2{font-size:clamp(26px,3.5vw,32px);margin-bottom:18px}
-h3{font-size:20px;line-height:1.2}
-p{margin:0 0 12px;max-width:68ch}
-code{font-family:ui-monospace,Menlo,monospace;font-size:15px;background:var(--soft);padding:1px 6px;border-radius:4px;overflow-wrap:anywhere}
-pre{overflow-x:auto;background:var(--soft);padding:14px;border-radius:8px;font-size:14px;line-height:1.45;margin:0}
-pre code{background:none;padding:0}
-a{color:inherit;text-decoration-thickness:2px;text-underline-offset:3px}
-a:focus-visible,button:focus-visible{outline:3px solid var(--em);outline-offset:2px}
-
-.hero{border-top:10px solid var(--ink)}
-.heroGrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center}
-.tag{display:inline-block;background:var(--em);color:#fff;font-weight:600;font-size:15px;padding:4px 12px;border-radius:99px;margin-bottom:16px}
-.lead{font-size:clamp(18px,2vw,21px);margin-top:16px}
-.dose{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
-.dose span{border:2px solid var(--line);border-radius:99px;padding:6px 14px;font-weight:600;font-size:15px}
-.box{width:100%;height:auto;display:block;max-height:420px}
-
-.green{background:var(--em);color:#fff}
-.green code{background:rgba(255,255,255,.18);color:#fff}
-.pink{background:var(--pk);color:var(--pkink)}
-
-.blocks{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:0;border:3px solid var(--line)}
-.blk{padding:20px;border:1.5px solid var(--line)}
-.blk .where{font-size:14px;margin:6px 0 10px;opacity:.85}
-.blk .nr{font-size:44px;font-weight:800;line-height:1;margin-bottom:8px;color:var(--em)}
-
-ol.tips{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:14px}
-ol.tips li{display:grid;grid-template-columns:56px minmax(0,1fr);gap:12px;align-items:start;background:rgba(255,255,255,.1);border-radius:10px;padding:14px}
-ol.tips .n{width:48px;height:48px;border-radius:50%;background:#fff;color:#00704a;font-weight:800;font-size:20px;display:grid;place-items:center}
-ol.tips b{display:block;font-size:18px;margin-bottom:2px}
-
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:18px;counter-reset:s}
-.step{border-top:6px solid var(--ink);padding-top:12px}
-.step::before{counter-increment:s;content:"Korak " counter(s);display:block;font-weight:800;font-size:15px;margin-bottom:4px}
-
-.files{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:18px}
-.file{border:2px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
-.fh{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 14px;border-bottom:2px solid var(--line);flex-wrap:wrap}
-.fh strong{font-size:15px;overflow-wrap:anywhere}
-.file pre{border-radius:0;flex:1}
-button{font:inherit;font-weight:600;font-size:15px;min-height:44px;padding:0 16px;border-radius:99px;border:2px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer}
-button:hover{background:var(--em);color:#fff;border-color:var(--em)}
-
-.warn{border:3px solid var(--line);padding:18px 20px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;align-items:start}
-.warn .x{font-weight:800;font-size:26px;line-height:1}
-footer{font-size:15px;border-top:10px solid var(--ink)}
-
-@media(max-width:600px){.heroGrid{grid-template-columns:minmax(0,1fr)}.box{max-height:300px;margin:0 auto}}
-@media(prefers-reduced-motion:no-preference){.pill{animation:bob 3s ease-in-out infinite}.pill.b{animation-delay:-1.5s}
-@keyframes bob{50%{transform:translateY(-6px)}}}
-</style>
+<link rel="stylesheet" href="stil.css">
 </head>
 <body>
+<nav class="menu" aria-label="Poglavja"><div class="in"><a href="index.html" aria-current="page">Claude Code</a><a href="povezave.html">Povezave</a><a href="vescine.html">Veščine</a><a href="projekti.html">Projekti</a><a href="spomin.html">Spomin</a><a href="artefakti.html">Artefakti</a><a href="raziskava.html">Raziskava</a><a href="opravila.html">Opravila</a></div></nav>
 
 <header class="band hero"><div class="wrap heroGrid">
   <div>
