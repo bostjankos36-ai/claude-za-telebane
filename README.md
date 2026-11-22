@@ -14,7 +14,8 @@ claude-za-telebane/
 ├── CLAUDE.md                  ← "pravila hiše" za Clauda
 └── .claude/
     ├── commands/
-    │   └── razlozi.md         ← ukaz /razlozi
+    │   ├── razlozi.md         ← ukaz /razlozi
+    │   └── shrani.md          ← ukaz /shrani
     ├── agents/
     │   └── pregledovalec.md   ← pomočnik, ki pregleda kodo
     └── skills/
@@ -46,7 +47,7 @@ Vse datoteke so navadno besedilo (Markdown). Lahko jih kopiraš v svoj projekt i
 5. **CLAUDE.md naj bo kratek.** Samo pravila, ki res veljajo vedno.
 6. **Ko se ponavljaš → naredi ukaz.** Če isto prosiš 3-krat, to sodi v `.claude/commands/`.
 7. **Preveri, ne zaupaj na slepo.** Reci: *"Preizkusi, ali dela, in mi pokaži."*
-8. **Shranjuj pogosto (commit).** Tako se lahko vedno vrneš nazaj.
+8. **Shranjuj pogosto (commit).** Tako se lahko vedno vrneš nazaj. Bližnjica: `/shrani`.
 9. **Ko se zaplete → nov pogovor.** Predolg pogovor zmede tudi Clauda.
 10. **Ne razumeš? Vprašaj.** Uporabi ukaz `/razlozi`. Ni neumnih vprašanj.
 
