@@ -32,9 +32,9 @@ Vse datoteke so navadno besedilo (Markdown). Lahko jih kopiraš v svoj projekt i
 | Gradnik | Kje je | Čemu služi |
 |---|---|---|
 | **CLAUDE.md** | koren projekta | Pravila, ki jih Claude prebere **vedno**. Kot listek na hladilniku. |
-| **Ukazi** | `.claude/commands/` | Bližnjice. Napišeš `/razlozi` namesto dolgega navodila. |
-| **Podagenti** | `.claude/agents/` | Pomočniki z eno nalogo (npr. samo pregled kode). |
-| **Veščine** | `.claude/skills/ime/SKILL.md` | Recepti, ki jih Claude uporabi sam, ko so potrebni. |
+| **Commands** | `.claude/commands/` | Bližnjice. Napišeš `/razlozi` namesto dolgega navodila. |
+| **Subagents** | `.claude/agents/` | Pomočniki z eno nalogo (npr. samo pregled kode). |
+| **Skills** | `.claude/skills/ime/SKILL.md` | Recepti, ki jih Claude uporabi sam, ko so potrebni. |
 
 ---
 
