@@ -2,12 +2,12 @@
 
 ## O projektu
 Preprost vodnik v slovenščini za delo s Claude Code — za začetnike brez
-programerskega znanja. Vsebuje primere datotek (CLAUDE.md, ukazi, podagent,
-veščina), ki jih lahko kdorkoli kopira v svoj projekt.
+programerskega znanja. Vsebuje primere datotek (CLAUDE.md, commands, subagent,
+skill), ki jih lahko kdorkoli kopira v svoj projekt.
 
 ## Pomembne datoteke
 - `README.md` — glavni vodnik, prva stran na GitHubu
-- `.claude/commands/` — ukaza `/razlozi` in `/shrani`
+- `.claude/commands/` — commands `/razlozi` in `/shrani`
 - `.claude/agents/pregledovalec.md` — pregled kode
 - `.claude/skills/preveri-kodo/` — preverjanje, ali koda dela
 
